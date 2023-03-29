@@ -3,7 +3,7 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Iva UX/UI</title>
@@ -12,22 +12,21 @@
 
 <body>
 
-<header> 
-
-    <div class="container">
-        <img src="img/iva.png" alt="logo" class="logo">
+    <header class="css-box-shadow"> 
 
 
-    <nav>
-    <ul>
-        <li><a href="index.html">WORK</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
-    </nav>
-    </div>
-
-</header>
+        <div class="container" id="hero">
+            <img src="img/iva.png" alt="logo" class="logo">
+        <nav>
+        <ul>
+            <li><a href="index.html">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        </nav>
+        </div>
+    
+    </header>
 
 <br>
 
@@ -45,8 +44,8 @@
     <div> 
         <div>
             <picture>
-                    <source srcset="img/profile.jpg" media="(max-width:200px)">
-                    <img src="img/profile.jpeg" alt="Profile photo">
+                    <source srcset="img/profile.jpg" media="(max-width: 450px)">
+                    <img src="img/profile.jpeg" alt="Profile photo" class="profile">
             </picture>
             <div>
                 <h2>My Story</h2>
@@ -100,13 +99,30 @@
     </div>
 </div>
 
+<div class="container skills-icons">
+
+<i class="fa-brands fa-figma" style="color: #222222;"></i>
+
+<i class="fa-brands fa-sketch" style="color: #222222;"></i>
+
+<i class="fa-brands fa-invision" style="color: #222222;"></i>
+
+<i class="fa-brands fa-github-alt" style="color: #222222;"></i>
+
+<i class="fa-brands fa-html5" style="color: #222222;"></i>
+
+<i class="fa-brands fa-js" style="color: #222222;"></i>
+
+</div>
+
 </main>
 
 <br>
 
 <footer id="contact">
-
+   
     <div class="container">
+        <a href="#contact"></a>
         <h2>Let's connect!</h2>
         <p>Like what you see? Feel free to reach out on Skype<a href="skype:iva.flowers"> Hi, Iva </a>or hit me up via email</p>
         <div>
@@ -114,21 +130,23 @@
         </div>
     </div>
 <br>
-    <div class="container">
+    <div class="container footer-icons">
+        
+        <a href="Behance" target="_blank">
+            <i class="fa fa-behance" aria-hidden="true"></i>
+        </a>
+        <a href="Dribbble" target="_blank">
+            <i class="fa fa-dribbble" aria-hidden="true"></i>
+        </a>
+
         <a href="https://www.linkedin.com/in/iva-mitrovic-53142a191/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="Twitter" target="_blank">
-            <i class="fa-brands fa-square-twitter"></i>
-        </a>
-        <a href="Instagram" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-        </a>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+
         <div>
             <p>Copyright Iva Mitrovic 2023</p>
         </div>
     </div>
-
 </footer>
 
 </body>

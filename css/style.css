@@ -9,9 +9,14 @@ Accent color (Ruby red): #FEFCF7;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  
+  }
+
 body {
   background-color: #FEFCF7;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
@@ -40,17 +45,17 @@ h4 {
   font-weight: 400;
 }
 a {
-  color: #C60A17;
+  color: #E76060;
   text-decoration: none; /* No underlining */
 }
 
 a:visited { /*visited link */
-color: #DD6C74;
+color: #E76060;
 }
 
 a:hover,
 a:focus {
-color: #DD6C74;
+color: #EB7F7E;
 text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -70,12 +75,14 @@ font-weight: 400;
 padding: 10px;
 border-radius: 3px;
 border: 1px solid #222222; /* width of the border, type, color */
-transition: 0.2 s opacity;
+transition-duration: 0.2 s;
+transition-property: opacity;
 }  
 
 .button:hover {
 opacity: 0.8; /* reduces the opacity of the button to 80% */
 text-decoration: none;
+opacity: 0.8;
 }
 
 a:active { /* selected link */
@@ -84,9 +91,9 @@ color: #222222;
 
 .button.contact {
   background-color: transparent;
-  color: #222222;
+  color: #FEFCF7;
   text-transform: uppercase;
-  border: 1px solid #222222;
+  border: 1px solid #FEFCF7;
 }
 
 .button.contact:hover {
@@ -97,7 +104,9 @@ color: #222222;
 /* Layout styling */
 
 .container {
-  padding: 0 15 px;
+  padding: 0 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .row {
@@ -109,7 +118,15 @@ color: #222222;
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 50px;
+}
+
+.profile {
+  max-width: 4500px;
+}
+
+.project {
+  max-width: fit-content;
 }
 
 header {
@@ -121,7 +138,13 @@ header {
   padding-bottom: 0px;
   padding-left: 0px;
   margin: 0px;
-  border-bottom:1px solid #222222
+  border-bottom:0px solid transparent;
+  box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
+	-webkit-box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
+	-moz-box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
+  position: fixed;
+  top:0;
+  right: 0;
 }
 
 nav > ul { 
@@ -155,17 +178,6 @@ p {
   background-color: #FEFCF7;
 }
 
-.css-box-shadow{
-	/*start ------------*/
-	width: [object Object]px; 
-	height: [object Object]px; 
-	background: #FEFCF7; 
-	border: solid #FEFCF7 0; 
-	box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
-	-webkit-box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
-	-moz-box-shadow: 0 5px 20px rgba(34, 34, 34, 0.2)  ; 
-  position: fixed;
-}
 
 main {
   padding-top: 133px;
@@ -185,7 +197,7 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 4px;
   }
-}
+
 
 #hero span {
   display: block;
@@ -204,12 +216,56 @@ Medium devices (640px and larger)
   clear: both;
   display: table;
 }
+}
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 0px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+
+#hero span {
+  display: block;
 }
+
+.col-lg-7 {
+  width: 60%;
+}
+
+.col-lg-5 {
+  width: 40%;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  }
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
@@ -220,3 +276,67 @@ X-large devices (1440px or larger)
   display: block;
 }
 
+footer {
+  background-color: #222222; 
+  padding:50px 0px;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  top:0;
+  right: 0;
+}
+
+.footer-icons i{
+
+  font-size: 32px;
+  padding: 6px;
+ 
+}
+
+.footer-icons a {
+color: #ffffff;
+
+}
+
+.skills-icons i{
+  font-size: 24px;
+  padding: 6px;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad} 
+  100% {fill: #f76414;}
+  
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move{
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px, 50px);}
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px, 48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
