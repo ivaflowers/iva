@@ -74,6 +74,8 @@ color: #222222;
 
 img {
   width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .button {
@@ -84,7 +86,6 @@ font-weight: 300;
 padding-left: 0px;
 padding-bottom: 22px;
 padding-right: 0px;
-padding-top: 10px;
 border-radius: 0px;
 border-bottom: 3px solid #222222; /* width of the border, type, color */
 transition-duration: 0.2 s;
@@ -130,6 +131,7 @@ margin: 0;
 }
 
 .row {
+    width: 100%;
   margin: 25px 0; /* 25 px top and bottom, 0 left and right */
 }
 
@@ -138,12 +140,26 @@ margin: 0;
 }
 
 .logo {
-  max-width: 50px;
+  max-width: 42px;
+  float: left;
+
 }
 
 .profile {
   max-width: 4500px;
 }
+
+.bg-skin {
+    
+    background-color:
+#DDCBBD;
+}
+
+.extra-padding-tb{
+    padding: 50px 0;
+    
+}
+
 
 .project {
   width: 100%;
@@ -182,14 +198,14 @@ nav > ul > li {
   width: fit-content;
 }
 
-
+ /*
 picture {
   float: right;
 }
 
 picture {
   width: 600px;
-}
+}*/
 
 p {
   width: 600 px;
@@ -203,6 +219,8 @@ p {
 main {
   padding-top: 133px;
 }
+
+
 
 /* ==============================
 Medium devices (640px and larger)
@@ -226,12 +244,21 @@ Medium devices (640px and larger)
 
 .col-md-6 {
   width: 50%;
+ 
+}
+.col-md-6 h3, .col-md-6 .button {
+margin-top: 0px;
+ 
 }
 
 .col-md-1 {
   width: 100%;
 }
 
+    
+.col-md-2{
+        width: 25%;
+    }
 
 [class*="col-"] {
   float: left;
@@ -268,10 +295,12 @@ Large devices (1024px or larger)
 
 .col-lg-7 {
   width: 60%;
+padding: 20px;
 }
 
 .col-lg-5 {
   width: 40%;
+    padding: 20px;
 }
 
 .col-lg-1 {
@@ -281,6 +310,10 @@ Large devices (1024px or larger)
 
 [class*="col-"] {
   float: left;
+}
+    
+    [class*="col-"]:first-child {
+padding-left: 0;
 }
 
 .row::after {
