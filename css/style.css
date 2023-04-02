@@ -29,11 +29,15 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 2.75em;
   font-weight: 700;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 h2 {
   font-size: 2.25em;
   font-weight: 700;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 h3 {
@@ -44,18 +48,23 @@ h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
+
+p {
+  padding-top: 6px;
+}
 a {
-  color: #E76060;
+  color: #222222;
   text-decoration: none; /* No underlining */
 }
 
 a:visited { /*visited link */
-color: #E76060;
+color: #222222;
 }
 
 a:hover,
 a:focus {
-color: #EB7F7E;
+color: #222222;
+opacity: 80%;
 text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -69,20 +78,24 @@ img {
 
 .button {
 display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this later */
-background-color: #222222;
-color: #ffffff; /* need to override the default link color */
-font-weight: 400;
-padding: 10px;
-border-radius: 3px;
-border: 1px solid #222222; /* width of the border, type, color */
+background-color: transparent;
+color: #222222; /* need to override the default link color */
+font-weight: 300;
+padding-left: 0px;
+padding-bottom: 22px;
+padding-right: 0px;
+padding-top: 10px;
+border-radius: 0px;
+border-bottom: 3px solid #222222; /* width of the border, type, color */
 transition-duration: 0.2 s;
 transition-property: opacity;
 }  
 
 .button:hover {
-opacity: 0.8; /* reduces the opacity of the button to 80% */
+opacity: 1; /* reduces the opacity of the button to 80% */
+padding-bottom: 13px;
+border-bottom: 12px solid #222222;
 text-decoration: none;
-opacity: 0.8;
 }
 
 a:active { /* selected link */
@@ -91,17 +104,24 @@ color: #222222;
 
 .button.contact {
   background-color: transparent;
+  padding: 12px;
   color: #FEFCF7;
   text-transform: uppercase;
   border: 1px solid #FEFCF7;
 }
 
 .button.contact:hover {
+  padding: 12px;
   background-color: #222222;
   color: #FEFCF7;
 }
 
 /* Layout styling */
+
+.background1 {
+background-color: #FEFCF7;
+margin: 0;
+}
 
 .container {
   padding: 0 15px;
@@ -126,7 +146,9 @@ color: #222222;
 }
 
 .project {
-  max-width: fit-content;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 header {
@@ -155,8 +177,7 @@ nav > ul {
 nav > ul > li {
   display: inline-block;
   padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   color: #222222;
   width: fit-content;
 }
@@ -207,6 +228,11 @@ Medium devices (640px and larger)
   width: 50%;
 }
 
+.col-md-1 {
+  width: 100%;
+}
+
+
 [class*="col-"] {
   float: left;
 }
@@ -247,6 +273,11 @@ Large devices (1024px or larger)
 .col-lg-5 {
   width: 40%;
 }
+
+.col-lg-1 {
+  width: 100%;
+}
+
 
 [class*="col-"] {
   float: left;
