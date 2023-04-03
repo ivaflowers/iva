@@ -9,9 +9,10 @@ Accent color (Ruby red): #FEFCF7;
   box-sizing: border-box;
 }
 
+/* Layout styling */
+
 html {
   scroll-behavior: smooth;
-  
   }
 
 body {
@@ -81,21 +82,21 @@ img {
 .button {
 display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this later */
 background-color: transparent;
-color: #222222; /* need to override the default link color */
-font-weight: 300;
+color: #E76060; /* need to override the default link color */
+font-weight: 700;
 padding-left: 0px;
 padding-bottom: 22px;
 padding-right: 0px;
 border-radius: 0px;
-border-bottom: 3px solid #222222; /* width of the border, type, color */
-transition-duration: 0.2 s;
+border-bottom: 3px solid #f76414; /* width of the border, type, color */
+transition-duration: 0.2s;
 transition-property: opacity;
 }  
 
 .button:hover {
 opacity: 1; /* reduces the opacity of the button to 80% */
 padding-bottom: 13px;
-border-bottom: 12px solid #222222;
+border-bottom: 12px solid #E76060;
 text-decoration: none;
 }
 
@@ -106,6 +107,7 @@ color: #222222;
 .button.contact {
   background-color: transparent;
   padding: 12px;
+  margin: 24px;
   color: #FEFCF7;
   text-transform: uppercase;
   border: 1px solid #FEFCF7;
@@ -115,9 +117,19 @@ color: #222222;
   padding: 12px;
   background-color: #222222;
   color: #FEFCF7;
+  opacity: 80%;
 }
 
-/* Layout styling */
+.newanchor:link {
+  color:#E76060;
+  text-decoration:none;
+  }
+  
+  .newanchor:hover{
+  color:#E76060;
+  text-decoration: none;
+  }
+
 
 .background1 {
 background-color: #FEFCF7;
@@ -140,7 +152,7 @@ margin: 0;
 }
 
 .logo {
-  max-width: 42px;
+  max-width: 50px;
   float: left;
 
 }
@@ -160,6 +172,10 @@ margin: 0;
     
 }
 
+.tab {
+  margin-top: 10em
+ }
+
 
 .project {
   width: 100%;
@@ -170,7 +186,7 @@ margin: 0;
 header {
   background-color: #FEFCF7;
   width: 100%;
-  text-align: center;
+
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -188,14 +204,33 @@ header {
 nav > ul { 
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav > ul > li {
-  display: inline-block;
   padding: 0 15px;
   font-weight: 500;
   color: #222222;
   width: fit-content;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top:2px;
+  font-size: 20px;;
+}
+
+.navtoggle.responsive li {
+  display: block;
 }
 
  /*
@@ -220,6 +255,9 @@ main {
   padding-top: 133px;
 }
 
+.center {
+  text-align: center
+ }
 
 
 /* ==============================
@@ -240,6 +278,14 @@ Medium devices (640px and larger)
 
 #hero span {
   display: block;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
 }
 
 .col-md-6 {

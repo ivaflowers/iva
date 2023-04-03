@@ -14,86 +14,59 @@
 
     <header class="css-box-shadow"> 
 
-
         <div class="container" id="hero">
+         <div class="navtoggle" id="myNavtoggle">   
+            <a href="index.html">
             <img src="img/ivalogo.svg" alt="logo" class="logo">
+            </a>
+        </div>    
+        </div>
+    
         <nav>
         <ul>
             <li><a href="index.html">projects</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="#contact">contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></i></a></li>
         </ul>
         </nav>
         </div>
     
     </header>
 
-<br>
 
 <main>
 
-<div class="container"> 
-    <div>
-        <h1>About</h1>
-    </div>
-</div>
-
-<br>
-
-<div class="container">
-    <div> 
+    <div class="container">
+        <div class="row">
         
-                <h2 class="col-md-6 col-lg-7">My Story</h2>
-
-                <p class="col-md-6 col-lg-7">Hey there — my name is Iva, pronounced Ee-va  (think WALLE’s little robot friend). 
-                    I’m a pop culture and art nerd from Belgrade, currently based in Munich. After studies of art and long experience in Visual Merchandising and fashion, I discovered passion for UX/UI design as a perfect sum of all of my interests. 
-                    Some fun facts about me: as a student, I was a reporter on a local TV station since it was the perfect way to attend all the cultural events I wanted to experience. Besides that career, I am also a retired detective. As a 7 y/o, together with my best friend, I solved a string of robberies in our building. Unfortunately, police didn’t take our theory about gang dealing juice boxes serious, so that crime stays officially unsolved up to this day. 
-                    In my free time, I like to read, write short stories and ski.</p>
-
-                    <div>
-                        <picture class="col-md-6 col-lg-5">
-                                <source srcset="img/profile.jpg" media="(max-width: 450px)">
-                                <img src="img/profile.jpeg" alt="Profile photo" class="profile">
-                        </picture>
-                        <div>    
-                <a></a>
-            </div>
-
-            <div class="col-md-6 col-lg-5">
-            <a href="files/resume.pdf" download>Download my Resume</a>
-            </div>
-
-            <div>
-                <h2>Skills & Tools</h2>
-                <div>
-                    <h3>Relevant Skills</h3>
-                    <ul>
-                    User research 
-                    Design thinking
-                    Wireframing
-                    Prototyping 
-                    Animation 
-                    Agile / SCRUM
-                    Frontend development
-                    </ul>
-                </div>    
-
-                <div>
-                    <h3>Toolbelt</h3>
-                    <ul>
-                    Figma
-                    Sketch
-                    InVision
-                    XD
-                    Miro
-                    After Effects
-                    HTML
-                    CSS
-                    JavaScript
-                    Pen & Paper
-                    </ul>
-                </div>
-            </div>
+            <div class="col-md-6 col-lg-5"> 
+                <h1>Nice to meet you.</h1>
+                <p>Hey there — my name is Iva, pronounced Ee-va  (think WALLE’s little robot friend).</p>
+                <p>I’m a pop culture and art nerd from Belgrade, currently based in Munich. After studies of art and long experience in Visual Merchandising and fashion, I discovered passion for UX/UI design as a perfect sum of all of my interests.</p>
+                <p></p>Some random facts about me: as a student, I was a reporter on a local TV station since it was the perfect way to attend all the cultural events I wanted to experience. Besides that career, I am also a retired detective. As a 7 y/o, together with my best friend, I solved a string of robberies in our building. Unfortunately, police didn’t take our theory about gang dealing juice boxes serious, so that crime stays officially unsolved up to this day.</p>
+                <p>In my free time, I like to read, write short stories and ski.</p>
+                <br>
+                <br>
+                <br>
+                <h2>RELEVANT SKILLS</h2>    
+                <p>UX Design, UI Design, user research, frontend development (HTML, CSS, JavaScript), animation.</p>
+                <h2>TOOLS</h2>
+                <p>Some of the tools I like using include Figma, Sketch, Adobe XD, InVision, GitHub, After Effects, VS Code and pen & paper.</p>
+            </div>    
+        
+          <div class="col-md-6 col-lg-7"> 
+                <picture>
+                 <source srcset="img/profile.jpeg" media="(max-width:765px)">
+                              <img src="img/profile.jpeg" alt="image" class="project">
+                          </picture>
+                <br>
+                <br>          
+                <br>
+                <a href="files/resume.pdf" download>Download my Resume</a>          
+          </div>
+        </div>
+        </div>
         </div>
     </div>
 </div>
@@ -123,7 +96,7 @@
     <div class="container">
         <a href="#contact"></a>
         <h2>Let's connect!</h2>
-        <p>Like what you see? Feel free to reach out on Skype<a href="skype:iva.flowers"> Hi, Iva </a>or hit me up via email</p>
+        <p>Like what you see? Feel free to reach out on Skype<a href="skype:iva.flowers" class="newanchor"> Hi, Iva </a>or hit me up via email</p>
         <div>
         <a href="mailto:ivamitrovic@protonmail.com" class="button contact">Email me</a>
         </div>
@@ -131,7 +104,7 @@
 <br>
     <div class="container footer-icons">
         
-        <a href="Behance" target="_blank">
+        <a href="https://www.behance.net/ivamitrovic" target="_blank">
             <i class="fa fa-behance" aria-hidden="true"></i>
         </a>
         <a href="Dribbble" target="_blank">
@@ -147,7 +120,7 @@
         </div>
     </div>
 </footer>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 </body>
 
