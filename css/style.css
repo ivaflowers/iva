@@ -1,8 +1,8 @@
 /*
 Colors used:
-Primary color (Off white): #C60A17;
+Primary color (Off white): #FEFCF7;
 Secondary color (Almost black): #222222;
-Accent color (Ruby red): #FEFCF7;
+Accent color (Ruby red): #E76060;
 */
 
 * {
@@ -72,9 +72,9 @@ color: #222222;
 
 a:hover,
 a:focus {
-color: #222222;
-opacity: 80%;
-text-decoration: underline; /* Underlining when hovering over a link */
+color: #E76060;
+opacity: 100%;
+text-decoration: none; /* Underlining when hovering over a link */
 }
 
 a:active { /* selected link */
@@ -90,7 +90,7 @@ img {
 .button {
 display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this later */
 background-color: transparent;
-color: #E76060; /* need to override the default link color */
+color: #222222; /* need to override the default link color */
 font-weight: 700;
 padding-left: 0px;
 padding-bottom: 22px;
@@ -104,6 +104,7 @@ transition: all .3s ease-out;
 .button:hover {
 opacity: 1; /* reduces the opacity of the button to 80% */
 padding-bottom: 13px;
+color: #E76060;
 border-bottom: 12px solid #E76060;
 text-decoration: none;
   
@@ -247,7 +248,7 @@ nav > ul > li {
 
 .navtoggle.responsive li {
   display: block;
-  margin-top: 8px;
+  margin-top: 18px;
   
 }
 
@@ -335,6 +336,13 @@ margin-top: -8px;
   clear: both;
   display: table;
 }
+
+.profilepic {
+  max-width: 360px;
+  padding-top: 190px;
+  float: right;
+}
+
 }
 
 /* ==============================
@@ -446,7 +454,7 @@ footer {
 .footer-icons i{
 
   font-size: 32px;
-  padding: 6px;
+  padding: 12px;
  
 }
 
@@ -456,7 +464,8 @@ color: #ffffff;
 }
 
 .footer-icons a:hover {
-text-decoration: none
+text-decoration: none;
+color: #E76060;
 
 }
 
